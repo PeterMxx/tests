@@ -11,13 +11,9 @@
                 }
             }
             function start(){
-                var a = document.cloneNode(true);
-                var b = a.fonts;
                 var fontface = new FontFace("fontface","url()",{});
-                b.add(fontface);
-                b.clear();
                 var d = new FontFaceSet([fontface]);
-                spin();
+                fontface.family = "font2";
                 gc();
                 fontface.load();
                 alert(fontface);
