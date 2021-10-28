@@ -27,7 +27,7 @@ var union_f = new Float64Array(union);
 var bad_fonts = [];
 
 for(var i = 0; i < SPRAY_FONTS; i++)
-    bad_fonts.push(new FontFace("font1", "", {}));
+    bad_fonts.push(new FontFace("font1", "url()", {}));
 
 var good_font = new FontFace("font2", "url(data:text/html,)", {});
 bad_fonts.push(good_font);
